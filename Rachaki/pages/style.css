@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* faz que o paddi nao exploda quano fica mais de 100px. */
+  }
+  
+  body{
+    background-color: #F6F7FB;
+    color: #1E1B3A; 
+};
+    
+.titulo-inicial{
+    color: #1E1B3A;
+}
