@@ -23,7 +23,40 @@
         </nav>
     </header>
     <main>
-        <h1>relatorio</h1>
+        <section class="resumo">
+            <div class="cartao">
+                <p class="resumo-titulo">Total gasto</p>
+                <p class="resumo-valor" id="total-gasto">0</p>
+            </div>
+            <div class="cartao">
+                <p class="resumo-titulo">Participantes</p>
+                <p class="resumo-valor" id="total-participantes">0</p>
+            </div>
+            <div class="cartao">
+                <p class="resumo-titulo">Por pessoa</p>
+                <p class="resumo-valor" id="por-pessoa">0</p>
+            </div>
+        </section>
+        <section class="cartao">
+                <div class="topo-tabela">
+                    <h2>Acerto entre participantes</h2>
+                    <button id="novo-racha" type="button">Novo racha</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Participante</th>
+                            <th>Pagou</th>
+                            <th>Saldo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpo-tabela">
+
+                    </tbody>
+                </table>
+        </section>
     </main>
+    <footer></footer>
+    <script src="relatorio.js"></script>
 </body>
 </html>
