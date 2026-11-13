@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  /* estou iniciando om uma borda e um padding */
+    box-sizing: border-box;  
   }
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -12,21 +12,21 @@ body {
 .topo{
     display: flex;
     gap: 25px;
-    align-items: center; /*Centralizar no meio da altura*/
-    padding: 60px 40px 20px; /*O primeiro número é em cima e embaixo, o segundo nos lados.*/
-    max-width: 1100px; /*nao aumentar mais em tela grande*/
+    align-items: center; 
+    padding: 60px 40px 20px; 
+    max-width: 1100px; 
     margin: 0 auto;
-    flex-wrap: wrap; /*se nao couber filha "pula linha e termina"*/
+    flex-wrap: wrap; 
 }
  .topo-texto{
-    flex: 1; /*pega o espeço que sobre na tela*/
-    min-width: 280px; /* nao pode dimniur mais que isso*/
+    flex: 1; 
+    min-width: 280px; 
  }
 
 .titulo-inicial{
   font-size: 36px;
   color: #1e1b3a;
-  margin-bottom: 22px; /*Espaço abaixo do texto*/
+  margin-bottom: 22px; 
   max-width: 300px;
 }
 .texto-inicial{
@@ -41,9 +41,9 @@ body {
     border-radius: 8px;
     padding: 12px 20px;
     display: inline-block;
-    font-weight: 500; /*peso da letra*/
+    font-weight: 500; 
     font-size: 17px;
-    margin-right: 15px; /* Adiciona um espaço direita */
+    margin-right: 15px; 
     transition: 0.3s;
 }
 .botao01{
@@ -67,17 +67,14 @@ body {
     transform: translateY(-5px);
 }
 .cartao-exemplo{
-    width: 340px; /*travando um tamanho para nao aumentar mais*/
+    width: 340px; 
     background-color: #ffffff;
     border: 1px solid #e1e4ee;
     border-radius: 10px;
     padding: 22px 22px;
     box-shadow: 0 4px 12px rgba(30, 27, 58, 0.08);
 }
-/* 1º: 0 = sombra não anda para os lados (eixo X)
-   2º: 4px = sombra desce 4px (eixo Y)
-   3º: 12px = desfoque, quanto maior mais suave
-   4º: rgba(30, 27, 58, 0.08) = cor da tinta com 8% de visibilidade */
+
 .cartao-titulo{
     font-size: 20px;
     color: #1e1b3a;
@@ -150,7 +147,7 @@ body {
 
 
 
-/* CABEÇALHO */
+
 .cabecalho {
     display: flex;
     align-items: center;
@@ -162,7 +159,7 @@ body {
     gap: 15px;
 }
 
-/* LOGO */
+
 .logo {
     display: flex;
     align-items: center;
@@ -180,7 +177,7 @@ body {
 }
 
 
-/* MENU */
+
 .cabecalho nav {
     display: flex;
     align-items: center;
@@ -200,14 +197,14 @@ body {
     transition: 0.3s;
 }
 
-/* EFEITO AO PASSAR O MOUSE */
+
 .cabecalho nav a:hover {
     color: #5b3df5;
     background-color: #f0edff;
     border: 1px solid #5b3df5;
 }
 
-/* PÁGINA ATUAL */
+
 .cabecalho nav a.ativo {
     color: #5b3df5;
     background-color: #eeeaff;

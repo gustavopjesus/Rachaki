@@ -1,37 +1,37 @@
-// 1. PEGAR OS ELEMENTOS DA PÁGINA
+
 const textoTotalGasto = document.getElementById("total-gasto");
 const textoTotalParticipantes = document.getElementById("total-participantes");
 const textoPorPessoa = document.getElementById("por-pessoa");
 const corpoTabela = document.getElementById("corpo-tabela");
 const botaoNovoRacha = document.getElementById("novo-racha");
 
-// 2. LER O QUE FOI SALVO NA PÁGINA DESPESAS
+
 let participantes = JSON.parse(localStorage.getItem("participantes")) || [];
 let despesas = JSON.parse(localStorage.getItem("despesas")) || [];
 
-// 3. SOMAR TODOS OS GASTOS
+
 let total = 0;
 
 despesas.forEach(function (gasto) {
     total = total + gasto.valor;
 });
 
-// 4. CALCULAR QUANTO CADA UM DEVERIA PAGAR
+
 let porPessoa = 0;
 
 if (participantes.length > 0) {
     porPessoa = total / participantes.length;
 }
 
-// 5. MOSTRAR OS TRÊS CARTÕES DO RESUMO
+
 textoTotalGasto.textContent = "R$ " + total.toFixed(2);
 textoTotalParticipantes.textContent = participantes.length;
 textoPorPessoa.textContent = "R$ " + porPessoa.toFixed(2);
 
-// 6. MONTAR A TABELA: UMA LINHA PARA CADA PARTICIPANTE
+
 participantes.forEach(function (nome) {
 
-    // quanto essa pessoa pagou no total
+    
     let pagou = 0;
 
     despesas.forEach(function (gasto) {
@@ -40,10 +40,10 @@ participantes.forEach(function (nome) {
         }
     });
 
-    // saldo = o que pagou menos a parte dela (arredondado em 2 casas)
+    
     const saldo = Math.round((pagou - porPessoa) * 100) / 100;
 
-    // criar a linha e as células
+    
     const linha = document.createElement("tr");
     const celulaNome = document.createElement("td");
     const celulaPagou = document.createElement("td");
@@ -52,7 +52,7 @@ participantes.forEach(function (nome) {
     celulaNome.textContent = nome;
     celulaPagou.textContent = "R$ " + pagou.toFixed(2);
 
-    // saldo positivo recebe (verde), negativo deve (coral), zero fica cinza
+    
     const etiquetaSaldo = document.createElement("span");
 
     if (saldo > 0) {
@@ -68,7 +68,7 @@ participantes.forEach(function (nome) {
 
     celulaSaldo.appendChild(etiquetaSaldo);
 
-    // colocar as células na linha e a linha na tabela
+   
     linha.appendChild(celulaNome);
     linha.appendChild(celulaPagou);
     linha.appendChild(celulaSaldo);
@@ -76,7 +76,7 @@ participantes.forEach(function (nome) {
     corpoTabela.appendChild(linha);
 });
 
-// 7. BOTÃO NOVO RACHA: APAGA TUDO E RECOMEÇA
+
 botaoNovoRacha.addEventListener("click", function () {
     const certeza = confirm("Apagar todos os participantes e gastos?");
 

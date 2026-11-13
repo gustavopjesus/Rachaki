@@ -9,7 +9,7 @@ body {
     color: #1e1b3a;
 }
 
-/* CARTÃO */
+
 .cartao {
     background-color: #ffffff;
     border: 1px solid #e1e4ee;
@@ -24,7 +24,7 @@ body {
     margin-bottom: 12px;
 }
 
-/* LINHA DO FORMULÁRIO */
+
 .linha-formulario {
     display: flex;
     gap: 15px;
@@ -32,7 +32,6 @@ body {
     align-items: center;
 }
 
-/* CAMPO (rótulo + input juntos) */
 .campo {
     flex: 1;
     min-width: 150px;
@@ -45,7 +44,7 @@ label {
     color: #6b7280;
 }
 
-/* INPUT */
+
 input {
     flex: 1;
     min-width: 150px;
@@ -59,7 +58,7 @@ input {
     width: 100%;
 }
 
-/* SELECT */
+
 select {
     padding: 10px;
     border: 1px solid #cbd0de;
@@ -71,7 +70,7 @@ select {
     width: 100%;
 }
 
-/* BOTÃO */
+
 button {
     background-color: #5b3df5;
     color: #ffffff;
@@ -88,7 +87,7 @@ button:hover {
     transform: translateY(-5px);
 }
 
-/* ETIQUETAS DOS PARTICIPANTES */
+
 .etiquetas {
     display: flex;
     gap: 10px;
@@ -104,7 +103,7 @@ button:hover {
     font-size: 15px;
 }
 
-/* TABELA */
+
 table {
     width: 100%;
 }
@@ -125,7 +124,7 @@ td {
     font-weight: bold;
 }
 
-/* BOTÃO REMOVER (fica depois do botão) */
+
 .remover {
     background-color: #fde3ea;
     color: #f04770;
