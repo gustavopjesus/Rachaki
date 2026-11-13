@@ -11,8 +11,6 @@ body {
     background-color: #f6f7fb;
     color: #1e1b3a;
 }
-
-/* CABEÇALHO */
 .cabecalho {
     height: 70px;
     width: 100%;
@@ -98,7 +96,11 @@ main {
     align-items: flex-start;
     gap: 12px;
 }
-
+.card1:hover,
+.card2:hover,
+.card3:hover {
+    transform: translateY(-5px);
+}
 /* NÚMEROS DOS CARDS */
 .numero {
     width: 42px;
