@@ -1,29 +1,120 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../inicio/inicio.css">
     <link rel="stylesheet" href="login.css">
-    <title>Login</title>
+
+    <title>Login | Rachaê</title>
 </head>
+
 <body>
-     <header class="cabecalho">
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+
         <div class="logo">
             <img src="../../logo.png" alt="Logo Rachaki">
             <h2>Rachaki</h2>
         </div>
 
-         <nav>
+        <nav>
             <a href="../inicio/inicio.html">Início</a>
             <a href="../despesas/despesas.html">Despesas</a>
             <a href="../relatorio/relatorio.html">Relatório</a>
             <a href="../comoFunciona/comoFunciona.html">Como funciona</a>
-            <a href="login.html">Entrar</a>
+            <a href="login.html" class="link-entrar">Entrar</a>
         </nav>
+
     </header>
+
+    <!-- Conteúdo principal -->
     <main>
-        <h1>login</h1>
+
+        <section class="area-login">
+
+            <!-- Login -->
+            <article class="card-login">
+
+                <h1>Entrar</h1>
+
+                <form>
+
+                    <div class="campo">
+                        <label for="email-login">Email</label>
+                        <input
+                            type="email"
+                            id="email-login"
+                            placeholder="voce@email.com"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha-login">Senha</label>
+                        <input
+                            type="password"
+                            id="senha-login"
+                            placeholder="••••••"
+                        >
+                    </div>
+
+                    <button type="submit" class="botao-entrar">
+                        Entrar
+                    </button>
+
+                </form>
+
+            </article>
+
+            <!-- Cadastro -->
+            <article class="card-cadastro">
+
+                <h1>Criar conta</h1>
+
+                <form>
+
+                    <div class="campo">
+                        <label for="nome-cadastro">Nome</label>
+                        <input
+                            type="text"
+                            id="nome-cadastro"
+                            placeholder="Seu nome"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="email-cadastro">Email</label>
+                        <input
+                            type="email"
+                            id="email-cadastro"
+                            placeholder="voce@email.com"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha-cadastro">Senha</label>
+                        <input
+                            type="password"
+                            id="senha-cadastro"
+                            placeholder="••••••"
+                        >
+                    </div>
+
+                    <button type="submit" class="botao-cadastrar">
+                        Cadastrar
+                    </button>
+
+                </form>
+
+            </article>
+
+        </section>
+
     </main>
+
 </body>
 </html>

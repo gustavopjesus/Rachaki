@@ -1,12 +1,248 @@
-*{
+
+/* CONFIGURAÇÕES GERAIS */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  /* faz que o paddi nao exploda quano fica mais de 100px. */
-  }
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f6f7fb;
     color: #1e1b3a;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    height: 70px;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 24px;
+    color: #1e1b3a;
+}
+
+.cabecalho nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.cabecalho nav a {
+    text-decoration: none;
+    color: #777C8D;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.cabecalho nav a:hover {
+    color: #6040FF;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 30px;
+}
+
+/* PRIMEIRA SEÇÃO */
+.como-funciona h1 {
+    font-size: 28px;
+    margin-bottom: 28px;
+}
+
+.como-funciona h1 span {
+    color: #6040FF;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.card1,
+.card2,
+.card3 {
+    background-color: #FFFFFF;
+    flex: 1;
+    min-height: 190px;
+    padding: 22px;
+    border-radius: 13px;
+    box-shadow: 0 4px 12px rgba(30, 35, 80, 0.10);
+    border: 1px solid #E1E3EC;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+/* NÚMEROS DOS CARDS */
+.numero {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.card1 .numero {
+    background-color: #6040FF;
+}
+
+.card2 .numero {
+    background-color: #10B96E;
+}
+
+.card3 .numero {
+    background-color: #FFBB42;
+    color: #1e1b3a;
+}
+
+/* TEXTOS DOS CARDS */
+.cards h3 {
+    font-size: 17px;
+    color: #1e1b3a;
+}
+
+.cards p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #777C8D;
+}
+
+/* SEÇÃO DE EXEMPLO */
+.Exemplo {
+    background-color: #FFFFFF;
+    margin-top: 28px;
+    padding: 25px;
+    border-radius: 13px;
+    min-height: 210px;
+
+    box-shadow: 0 4px 12px rgba(30, 35, 80, 0.10);
+    border: 1px solid #E1E3EC;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.Exemplo h2 {
+    width: 100%;
+    font-size: 20px;
+    color: #1e1b3a;
+}
+
+/* EXPLICAÇÃO */
+.explicacao {
+    flex: 1;
+    max-width: 600px;
+}
+
+.explicacao p {
+    color: #777C8D;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* RESULTADOS */
+.resultadosEX {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 220px;
+}
+
+.ValorPositivo,
+.ValorNegativo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    padding: 10px 15px;
+    border-radius: 25px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.ValorPositivo {
+    background-color: #DDF7EB;
+    color: #10B96E;
+}
+
+.ValorNegativo {
+    background-color: #FCE3EA;
+    color: #FF4168;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 700px) {
+
+    .cabecalho {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cabecalho nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main {
+        padding: 25px 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .Exemplo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .explicacao {
+        max-width: 100%;
+    }
+
+    .resultadosEX {
+        width: 100%;
+    }
 }
 
 

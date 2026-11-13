@@ -1,12 +1,230 @@
-*{
+
+/* CONFIGURAÇÕES GERAIS */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  /* faz que o paddi nao exploda quano fica mais de 100px. */
-  }
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f6f7fb;
     color: #1e1b3a;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    height: 62px;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 24px;
+    color: #1e1b3a;
+}
+
+.cabecalho nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.cabecalho nav a {
+    text-decoration: none;
+    color: #777C8D;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.cabecalho nav a:hover {
+    color: #6040FF;
+}
+
+/* BOTÃO ENTRAR DO CABEÇALHO */
+.cabecalho nav .link-entrar {
+    border: 1.5px solid #6040FF;
+    color: #6040FF;
+    padding: 10px 22px;
+    border-radius: 11px;
+    font-weight: bold;
+}
+
+.cabecalho nav .link-entrar:hover {
+    background-color: #6040FF;
+    color: #FFFFFF;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 27px 30px;
+}
+
+/* ÁREA DE LOGIN E CADASTRO */
+.area-login {
+    display: flex;
+    gap: 27px;
+    width: 100%;
+}
+
+/* CARDS */
+.card-login,
+.card-cadastro {
+    flex: 1;
+    min-width: 0;
+    min-height: 420px;
+    background-color: #FFFFFF;
+    padding: 22px;
+    border-radius: 13px;
+    border: 1px solid #E1E3EC;
+    box-shadow: 0 4px 12px rgba(30, 35, 80, 0.10);
+}
+
+/* TÍTULOS */
+.card-login h1,
+.card-cadastro h1 {
+    font-size: 25px;
+    margin-bottom: 28px;
+    color: #1e1b3a;
+}
+
+/* FORMULÁRIOS */
+.card-login form,
+.card-cadastro form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* CAMPOS */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #777C8D;
+}
+
+.campo input {
+    width: 100%;
+    height: 41px;
+    padding: 0 12px;
+    border: 1.5px solid #CDD3E2;
+    border-radius: 9px;
+    font-size: 14px;
+    color: #1e1b3a;
+    outline: none;
+    transition: 0.3s;
+}
+
+.campo input::placeholder {
+    color: #A0A9BD;
+}
+
+.campo input:focus {
+    border-color: #6040FF;
+    box-shadow: 0 0 0 2px rgba(96, 64, 255, 0.10);
+}
+
+/* BOTÃO ENTRAR */
+.botao-entrar {
+    width: 100%;
+    height: 47px;
+    margin-top: 15px;
+    background-color: #6040FF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-entrar:hover {
+    background-color: #4D30DB;
+}
+
+/* AVISO */
+.aviso {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #777C8D;
+}
+
+/* BOTÃO CADASTRAR */
+.botao-cadastrar {
+    width: 100%;
+    height: 47px;
+    margin-top: 12px;
+    background-color: #EEE9FF;
+    color: #6040FF;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-cadastrar:hover {
+    background-color: #6040FF;
+    color: #FFFFFF;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 700px) {
+
+    .cabecalho {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cabecalho nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .area-login {
+        flex-direction: column;
+    }
+
+    .card-login,
+    .card-cadastro {
+        width: 100%;
+        min-height: auto;
+    }
 }
 
 
